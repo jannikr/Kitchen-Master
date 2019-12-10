@@ -25,8 +25,7 @@ class LoginSignUpViewController: UIViewController {
     //Sets up the UI Elements
     func setUpProperties(){
         
-        //Anmelden Button
-        anmeldenButton.layer.cornerRadius = anmeldenButton.layer.frame.height/2
+        //Background
         
     }
 
