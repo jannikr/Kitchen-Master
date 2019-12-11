@@ -28,5 +28,10 @@ class LoginSignUpViewController: UIViewController {
         //Background
         
     }
+    
+    //Hide status-bar
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 
 }

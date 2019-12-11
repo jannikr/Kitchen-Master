@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		211D6653239D22EA00AC685F /* LoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211D6652239D22EA00AC685F /* LoginSignUpViewController.swift */; };
 		211D665A239FE25700AC685F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211D6659239FE25700AC685F /* CustomButton.swift */; };
+		2151936823A0D9E100AAEAA9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151936723A0D9E100AAEAA9 /* LoginViewController.swift */; };
+		2151936A23A0E47200AAEAA9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151936923A0E47200AAEAA9 /* CustomTextField.swift */; };
+		2151936C23A0E65600AAEAA9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151936B23A0E65600AAEAA9 /* SignUpViewController.swift */; };
 		218BA42A23911B9900146098 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218BA42923911B9900146098 /* AppDelegate.swift */; };
 		218BA42C23911B9900146098 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218BA42B23911B9900146098 /* SceneDelegate.swift */; };
 		218BA43123911B9900146098 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218BA42F23911B9900146098 /* Main.storyboard */; };
@@ -19,6 +22,9 @@
 /* Begin PBXFileReference section */
 		211D6652239D22EA00AC685F /* LoginSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpViewController.swift; sourceTree = "<group>"; };
 		211D6659239FE25700AC685F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		2151936723A0D9E100AAEAA9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2151936923A0E47200AAEAA9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		2151936B23A0E65600AAEAA9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		218BA42623911B9900146098 /* kitchenMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitchenMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218BA42923911B9900146098 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		218BA42B23911B9900146098 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +49,8 @@
 			isa = PBXGroup;
 			children = (
 				211D6652239D22EA00AC685F /* LoginSignUpViewController.swift */,
+				2151936723A0D9E100AAEAA9 /* LoginViewController.swift */,
+				2151936B23A0E65600AAEAA9 /* SignUpViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -51,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				211D6659239FE25700AC685F /* CustomButton.swift */,
+				2151936923A0E47200AAEAA9 /* CustomTextField.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -158,8 +167,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				211D665A239FE25700AC685F /* CustomButton.swift in Sources */,
+				2151936C23A0E65600AAEAA9 /* SignUpViewController.swift in Sources */,
 				218BA42A23911B9900146098 /* AppDelegate.swift in Sources */,
+				2151936A23A0E47200AAEAA9 /* CustomTextField.swift in Sources */,
 				211D6653239D22EA00AC685F /* LoginSignUpViewController.swift in Sources */,
+				2151936823A0D9E100AAEAA9 /* LoginViewController.swift in Sources */,
 				218BA42C23911B9900146098 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
