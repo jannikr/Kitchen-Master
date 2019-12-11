@@ -1,11 +1,12 @@
 # kitchenMaster
 iPhone application for cooking with the ingredients you have at home.
 
-## Features
-
-* User Login
+## Features 1st stage
 * Searching for recipes based on ingrediants
 * Searching for recipes based on name
 * Adding recipes
-* News feed
 
+## Optional features 2nd stage
+* Database
+* User Login
+* News feed
