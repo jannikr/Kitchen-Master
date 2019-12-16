@@ -13,6 +13,11 @@
 		2151936A23A0E47200AAEAA9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151936923A0E47200AAEAA9 /* CustomTextField.swift */; };
 		2151936C23A0E65600AAEAA9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151936B23A0E65600AAEAA9 /* SignUpViewController.swift */; };
 		2151936E23A6777700AAEAA9 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151936D23A6777700AAEAA9 /* CustomNavigationController.swift */; };
+		2151937023A831E200AAEAA9 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 2151936F23A831E200AAEAA9 /* icons */; };
+		2151937223A834E200AAEAA9 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151937123A834E200AAEAA9 /* HomeTableViewController.swift */; };
+		2151937423A8354B00AAEAA9 /* CookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151937323A8354B00AAEAA9 /* CookTableViewController.swift */; };
+		2151937623A8356000AAEAA9 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151937523A8356000AAEAA9 /* AddTableViewController.swift */; };
+		2151937823A835C600AAEAA9 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151937723A835C600AAEAA9 /* UserViewController.swift */; };
 		218BA42A23911B9900146098 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218BA42923911B9900146098 /* AppDelegate.swift */; };
 		218BA42C23911B9900146098 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218BA42B23911B9900146098 /* SceneDelegate.swift */; };
 		218BA43123911B9900146098 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218BA42F23911B9900146098 /* Main.storyboard */; };
@@ -27,6 +32,11 @@
 		2151936923A0E47200AAEAA9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		2151936B23A0E65600AAEAA9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2151936D23A6777700AAEAA9 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		2151936F23A831E200AAEAA9 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icons; sourceTree = "<group>"; };
+		2151937123A834E200AAEAA9 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		2151937323A8354B00AAEAA9 /* CookTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookTableViewController.swift; sourceTree = "<group>"; };
+		2151937523A8356000AAEAA9 /* AddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
+		2151937723A835C600AAEAA9 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		218BA42623911B9900146098 /* kitchenMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitchenMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218BA42923911B9900146098 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		218BA42B23911B9900146098 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				211D6652239D22EA00AC685F /* LoginSignUpViewController.swift */,
+				2151937123A834E200AAEAA9 /* HomeTableViewController.swift */,
+				2151937723A835C600AAEAA9 /* UserViewController.swift */,
+				2151937323A8354B00AAEAA9 /* CookTableViewController.swift */,
+				2151937523A8356000AAEAA9 /* AddTableViewController.swift */,
 				2151936723A0D9E100AAEAA9 /* LoginViewController.swift */,
 				2151936B23A0E65600AAEAA9 /* SignUpViewController.swift */,
 			);
@@ -91,6 +105,7 @@
 				218BA42923911B9900146098 /* AppDelegate.swift */,
 				218BA42B23911B9900146098 /* SceneDelegate.swift */,
 				218BA42F23911B9900146098 /* Main.storyboard */,
+				2151936F23A831E200AAEAA9 /* icons */,
 				218BA43223911B9C00146098 /* Assets.xcassets */,
 				218BA43423911B9C00146098 /* LaunchScreen.storyboard */,
 				218BA43723911B9C00146098 /* Info.plist */,
@@ -157,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				218BA43623911B9C00146098 /* LaunchScreen.storyboard in Resources */,
+				2151937023A831E200AAEAA9 /* icons in Resources */,
 				218BA43323911B9C00146098 /* Assets.xcassets in Resources */,
 				218BA43123911B9900146098 /* Main.storyboard in Resources */,
 			);
@@ -170,13 +186,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				211D665A239FE25700AC685F /* CustomButton.swift in Sources */,
+				2151937823A835C600AAEAA9 /* UserViewController.swift in Sources */,
+				2151937623A8356000AAEAA9 /* AddTableViewController.swift in Sources */,
 				2151936C23A0E65600AAEAA9 /* SignUpViewController.swift in Sources */,
 				218BA42A23911B9900146098 /* AppDelegate.swift in Sources */,
 				2151936A23A0E47200AAEAA9 /* CustomTextField.swift in Sources */,
 				2151936E23A6777700AAEAA9 /* CustomNavigationController.swift in Sources */,
 				211D6653239D22EA00AC685F /* LoginSignUpViewController.swift in Sources */,
+				2151937223A834E200AAEAA9 /* HomeTableViewController.swift in Sources */,
 				2151936823A0D9E100AAEAA9 /* LoginViewController.swift in Sources */,
 				218BA42C23911B9900146098 /* SceneDelegate.swift in Sources */,
+				2151937423A8354B00AAEAA9 /* CookTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

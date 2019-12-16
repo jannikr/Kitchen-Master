@@ -196,10 +196,10 @@ die du zuhause hast.</string>
             </objects>
             <point key="canvasLocation" x="1657" y="471"/>
         </scene>
-        <!--Item-->
+        <!--Home Table View Controller-->
         <scene sceneID="TPC-6X-ejB">
             <objects>
-                <tableViewController id="bew-N5-wMu" sceneMemberID="viewController">
+                <tableViewController id="bew-N5-wMu" customClass="HomeTableViewController" customModule="kitchenMaster" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BvN-EC-Efg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,16 +219,16 @@ die du zuhause hast.</string>
                             <outlet property="delegate" destination="bew-N5-wMu" id="kat-FB-NMv"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="kmh-71-9W1"/>
+                    <navigationItem key="navigationItem" id="i9N-bI-Ec6"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TB7-vG-LKc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-393" y="2080"/>
+            <point key="canvasLocation" x="-394" y="2823"/>
         </scene>
-        <!--Item-->
+        <!--Cook Table View Controller-->
         <scene sceneID="INd-lM-sw6">
             <objects>
-                <tableViewController id="0RA-4K-UmC" sceneMemberID="viewController">
+                <tableViewController id="0RA-4K-UmC" customClass="CookTableViewController" customModule="kitchenMaster" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JL6-lZ-2fh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,16 +248,16 @@ die du zuhause hast.</string>
                             <outlet property="delegate" destination="0RA-4K-UmC" id="ICR-OY-zRK"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="S1F-Vn-rol"/>
+                    <navigationItem key="navigationItem" id="xZ5-1k-GWO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPO-AJ-whB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="396" y="2080"/>
+            <point key="canvasLocation" x="439" y="2822"/>
         </scene>
-        <!--Item-->
+        <!--Add Table View Controller-->
         <scene sceneID="LXx-Zq-cgC">
             <objects>
-                <tableViewController id="cm9-by-F8S" sceneMemberID="viewController">
+                <tableViewController id="cm9-by-F8S" customClass="AddTableViewController" customModule="kitchenMaster" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uJb-6z-B0I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -277,27 +277,27 @@ die du zuhause hast.</string>
                             <outlet property="delegate" destination="cm9-by-F8S" id="KaI-vf-FbD"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="ttg-Yx-y0w"/>
+                    <navigationItem key="navigationItem" id="6OD-wc-Weg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWH-qh-1ZF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1300" y="2080"/>
+            <point key="canvasLocation" x="1332" y="2821"/>
         </scene>
-        <!--Item 2-->
+        <!--User View Controller-->
         <scene sceneID="dpa-jb-ZpC">
             <objects>
-                <viewController id="3of-qJ-b3U" sceneMemberID="viewController">
+                <viewController id="3of-qJ-b3U" customClass="UserViewController" customModule="kitchenMaster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T4o-jv-rUJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="NAm-ht-ZkI"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="aaj-Bp-32t"/>
+                    <navigationItem key="navigationItem" id="dFm-hY-JUz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxK-za-Qks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2074" y="2080"/>
+            <point key="canvasLocation" x="2251" y="2822"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Exc-i2-dM4">
@@ -309,10 +309,10 @@ die du zuhause hast.</string>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="3of-qJ-b3U" kind="relationship" relationship="viewControllers" id="0Vn-xD-j99"/>
-                        <segue destination="bew-N5-wMu" kind="relationship" relationship="viewControllers" id="a4A-tl-VuF"/>
-                        <segue destination="0RA-4K-UmC" kind="relationship" relationship="viewControllers" id="IgA-YW-8kE"/>
-                        <segue destination="cm9-by-F8S" kind="relationship" relationship="viewControllers" id="7e8-VD-ifW"/>
+                        <segue destination="oQK-xf-e2a" kind="relationship" relationship="viewControllers" id="IgA-YW-8kE"/>
+                        <segue destination="lZC-Nu-LPB" kind="relationship" relationship="viewControllers" id="0Vn-xD-j99"/>
+                        <segue destination="ejF-gw-6Lo" kind="relationship" relationship="viewControllers" id="a4A-tl-VuF"/>
+                        <segue destination="tWC-Cr-tGE" kind="relationship" relationship="viewControllers" id="7e8-VD-ifW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOd-jS-0qI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -337,9 +337,93 @@ die du zuhause hast.</string>
             </objects>
             <point key="canvasLocation" x="-30.434782608695656" y="66.84782608695653"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="kdy-fL-N3S">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ejF-gw-6Lo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="add_ai.png" selectedImage="add_orange_ai.png" id="kmh-71-9W1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gyh-BV-fa8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bew-N5-wMu" kind="relationship" relationship="rootViewController" id="28s-Mu-2jx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K1r-gO-t5C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-394.20289855072468" y="2079.6195652173915"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="RW7-lw-fI2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oQK-xf-e2a" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="home_ai.png" selectedImage="home_orange_ai.png" id="S1F-Vn-rol"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AHB-cj-vbM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0RA-4K-UmC" kind="relationship" relationship="rootViewController" id="6zj-E2-wDD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94x-ln-LzT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="439" y="2080"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="hnY-XE-JSV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tWC-Cr-tGE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="cook_ai.png" selectedImage="cook_orange_ai.png" id="ttg-Yx-y0w"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UDI-Pk-eDS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cm9-by-F8S" kind="relationship" relationship="rootViewController" id="eW9-Tb-RpN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i0W-zn-8qJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1332" y="2080"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="Rg8-vK-ZjA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lZC-Nu-LPB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 2" image="user_ai.png" selectedImage="user_orange_ai.png" id="aaj-Bp-32t"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gQL-fN-ZOk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3of-qJ-b3U" kind="relationship" relationship="rootViewController" id="Owd-t5-Hl5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96l-Aw-Y2x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2252" y="2080"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="add_ai.png" width="28" height="29"/>
+        <image name="add_orange_ai.png" width="28" height="29"/>
         <image name="cook" width="634" height="608"/>
+        <image name="cook_ai.png" width="32" height="24"/>
+        <image name="cook_orange_ai.png" width="32" height="24"/>
+        <image name="home_ai.png" width="35" height="32"/>
+        <image name="home_orange_ai.png" width="35" height="32"/>
+        <image name="user_ai.png" width="29" height="30"/>
+        <image name="user_orange_ai.png" width="29" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="OIV-ku-Lgr"/>
