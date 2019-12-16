@@ -23,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlW-2l-i5o" customClass="CustomButton" customModule="kitchenMaster" customModuleProvider="target">
-                                <rect key="frame" x="123" y="607" width="168" height="36"/>
+                                <rect key="frame" x="123" y="553" width="168" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96610456710000003" green="0.59953778980000005" blue="0.3411074281" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="ANMELDEN">
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipc-tX-vA9">
-                                <rect key="frame" x="123" y="650" width="168" height="37"/>
+                                <rect key="frame" x="123" y="589" width="168" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="REGISTRIEREN">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,7 +48,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LKG-Nx-L1G">
-                                <rect key="frame" x="20" y="434" width="374" height="98"/>
+                                <rect key="frame" x="20" y="435" width="374" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Koche ein tolles Menü 
@@ -58,6 +58,17 @@ die du zuhause hast.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mz3-TL-OKa">
+                                <rect key="frame" x="146" y="670" width="122" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="Anmeldung überspringen">
+                                    <color key="titleColor" red="0.96610456710000003" green="0.59953778980000005" blue="0.3411074281" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MPR-hN-FmB" kind="modal" id="OIV-ku-Lgr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ldX-yO-FZX"/>
@@ -106,6 +117,9 @@ die du zuhause hast.</string>
                                 <state key="normal" title="ANMELDEN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="MPR-hN-FmB" kind="modal" id="Zlk-pc-egm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Passwort vergessen?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dc2-4k-Gcj">
                                 <rect key="frame" x="139" y="533" width="137" height="17"/>
@@ -162,6 +176,9 @@ die du zuhause hast.</string>
                                 <state key="normal" title="REGISTRIEREN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="MPR-hN-FmB" kind="modal" id="MqB-Rr-t3b"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Dein Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kdS-ca-JRZ" customClass="CustomTextField" customModule="kitchenMaster" customModuleProvider="target">
                                 <rect key="frame" x="20" y="294" width="374" height="54"/>
@@ -179,10 +196,133 @@ die du zuhause hast.</string>
             </objects>
             <point key="canvasLocation" x="1657" y="471"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
+        <scene sceneID="TPC-6X-ejB">
+            <objects>
+                <tableViewController id="bew-N5-wMu" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BvN-EC-Efg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="lFD-6W-3I9">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lFD-6W-3I9" id="Irn-XF-ACM">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bew-N5-wMu" id="1OK-ia-Ibb"/>
+                            <outlet property="delegate" destination="bew-N5-wMu" id="kat-FB-NMv"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="kmh-71-9W1"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TB7-vG-LKc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-393" y="2080"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="INd-lM-sw6">
+            <objects>
+                <tableViewController id="0RA-4K-UmC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JL6-lZ-2fh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="q1b-Px-nB3">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q1b-Px-nB3" id="3BT-Co-7ly">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0RA-4K-UmC" id="IzR-dT-Rab"/>
+                            <outlet property="delegate" destination="0RA-4K-UmC" id="ICR-OY-zRK"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="S1F-Vn-rol"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SPO-AJ-whB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="396" y="2080"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="LXx-Zq-cgC">
+            <objects>
+                <tableViewController id="cm9-by-F8S" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uJb-6z-B0I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JTH-sE-TDE">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JTH-sE-TDE" id="9CN-gi-Y1u">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cm9-by-F8S" id="9jX-T9-9BH"/>
+                            <outlet property="delegate" destination="cm9-by-F8S" id="KaI-vf-FbD"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="ttg-Yx-y0w"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gWH-qh-1ZF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="2080"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="dpa-jb-ZpC">
+            <objects>
+                <viewController id="3of-qJ-b3U" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T4o-jv-rUJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="NAm-ht-ZkI"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="aaj-Bp-32t"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hxK-za-Qks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2074" y="2080"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Exc-i2-dM4">
+            <objects>
+                <tabBarController id="MPR-hN-FmB" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uhM-8m-7HP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3of-qJ-b3U" kind="relationship" relationship="viewControllers" id="0Vn-xD-j99"/>
+                        <segue destination="bew-N5-wMu" kind="relationship" relationship="viewControllers" id="a4A-tl-VuF"/>
+                        <segue destination="0RA-4K-UmC" kind="relationship" relationship="viewControllers" id="IgA-YW-8kE"/>
+                        <segue destination="cm9-by-F8S" kind="relationship" relationship="viewControllers" id="7e8-VD-ifW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fOd-jS-0qI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="781" y="1327"/>
+        </scene>
+        <!--Custom Navigation Controller-->
         <scene sceneID="WtC-LS-vJg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ofw-5c-czN" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ofw-5c-czN" customClass="CustomNavigationController" customModule="kitchenMaster" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r3M-B8-UN3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -201,4 +341,7 @@ die du zuhause hast.</string>
     <resources>
         <image name="cook" width="634" height="608"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="OIV-ku-Lgr"/>
+    </inferredMetricsTieBreakers>
 </document>
