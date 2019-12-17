@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Table View Controller-->
+        <scene sceneID="LXx-Zq-cgC">
+            <objects>
+                <tableViewController id="cm9-by-F8S" customClass="AddTableViewController" customModule="kitchenMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uJb-6z-B0I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JTH-sE-TDE">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JTH-sE-TDE" id="9CN-gi-Y1u">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cm9-by-F8S" id="9jX-T9-9BH"/>
+                            <outlet property="delegate" destination="cm9-by-F8S" id="KaI-vf-FbD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="6OD-wc-Weg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gWH-qh-1ZF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1332" y="2821"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="hnY-XE-JSV">
+            <objects>
+                <navigationController storyboardIdentifier="Cook" automaticallyAdjustsScrollViewInsets="NO" id="tWC-Cr-tGE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="cook_ai.png" selectedImage="cook_orange_ai.png" id="ttg-Yx-y0w"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UDI-Pk-eDS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cm9-by-F8S" kind="relationship" relationship="rootViewController" id="eW9-Tb-RpN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i0W-zn-8qJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1332" y="2080"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cook_ai.png" width="32" height="24"/>
+        <image name="cook_orange_ai.png" width="32" height="24"/>
+    </resources>
+</document>

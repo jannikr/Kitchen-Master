@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User View Controller-->
+        <scene sceneID="dpa-jb-ZpC">
+            <objects>
+                <viewController id="3of-qJ-b3U" customClass="UserViewController" customModule="kitchenMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T4o-jv-rUJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="NAm-ht-ZkI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dFm-hY-JUz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hxK-za-Qks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2251" y="2822"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="Rg8-vK-ZjA">
+            <objects>
+                <navigationController storyboardIdentifier="User" automaticallyAdjustsScrollViewInsets="NO" id="lZC-Nu-LPB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 2" image="user_ai.png" selectedImage="user_orange_ai.png" id="aaj-Bp-32t"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gQL-fN-ZOk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3of-qJ-b3U" kind="relationship" relationship="rootViewController" id="Owd-t5-Hl5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96l-Aw-Y2x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2252" y="2080"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="user_ai.png" width="29" height="30"/>
+        <image name="user_orange_ai.png" width="29" height="30"/>
+    </resources>
+</document>
