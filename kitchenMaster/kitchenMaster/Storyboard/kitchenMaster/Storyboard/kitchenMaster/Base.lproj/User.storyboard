@@ -23,11 +23,11 @@
             </objects>
             <point key="canvasLocation" x="2251" y="2822"/>
         </scene>
-        <!--Item 2-->
+        <!--Navigation Controller-->
         <scene sceneID="Rg8-vK-ZjA">
             <objects>
                 <navigationController storyboardIdentifier="User" automaticallyAdjustsScrollViewInsets="NO" id="lZC-Nu-LPB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" image="user_ai.png" selectedImage="user_orange_ai.png" id="aaj-Bp-32t"/>
+                    <tabBarItem key="tabBarItem" title="" image="user_ai" selectedImage="user_ai" id="aaj-Bp-32t"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gQL-fN-ZOk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -44,7 +44,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="user_ai.png" width="29" height="30"/>
-        <image name="user_orange_ai.png" width="29" height="30"/>
+        <image name="user_ai" width="29" height="30"/>
     </resources>
 </document>

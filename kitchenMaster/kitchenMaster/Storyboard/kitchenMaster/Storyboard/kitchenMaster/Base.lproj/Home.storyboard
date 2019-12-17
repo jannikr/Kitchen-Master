@@ -35,11 +35,11 @@
             </objects>
             <point key="canvasLocation" x="439" y="2822"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="RW7-lw-fI2">
             <objects>
                 <navigationController storyboardIdentifier="Home" automaticallyAdjustsScrollViewInsets="NO" id="oQK-xf-e2a" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="home_ai.png" selectedImage="home_orange_ai.png" id="S1F-Vn-rol"/>
+                    <tabBarItem key="tabBarItem" title="" image="home_ai" selectedImage="home_orange_ai" id="S1F-Vn-rol"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AHB-cj-vbM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -56,7 +56,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="home_ai.png" width="35" height="32"/>
-        <image name="home_orange_ai.png" width="35" height="32"/>
+        <image name="home_ai" width="35" height="32"/>
+        <image name="home_orange_ai" width="35" height="32"/>
     </resources>
 </document>

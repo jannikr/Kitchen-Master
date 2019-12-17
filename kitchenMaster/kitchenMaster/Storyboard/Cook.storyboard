@@ -35,11 +35,11 @@
             </objects>
             <point key="canvasLocation" x="1332" y="2821"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="hnY-XE-JSV">
             <objects>
                 <navigationController storyboardIdentifier="Cook" automaticallyAdjustsScrollViewInsets="NO" id="tWC-Cr-tGE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="cook_ai.png" selectedImage="cook_orange_ai.png" id="ttg-Yx-y0w"/>
+                    <tabBarItem key="tabBarItem" title="" image="cook_ai" selectedImage="cook_orange_ai" id="ttg-Yx-y0w"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UDI-Pk-eDS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -56,7 +56,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cook_ai.png" width="32" height="24"/>
-        <image name="cook_orange_ai.png" width="32" height="24"/>
+        <image name="cook_ai" width="32" height="24"/>
+        <image name="cook_orange_ai" width="32" height="24"/>
     </resources>
 </document>
