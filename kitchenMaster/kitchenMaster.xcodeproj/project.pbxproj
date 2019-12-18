@@ -29,6 +29,8 @@
 		218F914223A8F61B00A22C91 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218F914023A8F61B00A22C91 /* Home.storyboard */; };
 		218F914423A8F65900A22C91 /* Cook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218F914323A8F65900A22C91 /* Cook.storyboard */; };
 		218F914723A8F6A100A22C91 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218F914523A8F6A100A22C91 /* User.storyboard */; };
+		218F914D23AA3B8000A22C91 /* RezeptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218F914C23AA3B8000A22C91 /* RezeptCell.swift */; };
+		218F914F23AA3BCB00A22C91 /* RezeptCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218F914E23AA3BCB00A22C91 /* RezeptCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		218F914123A8F61B00A22C91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = kitchenMaster/Storyboard/kitchenMaster/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		218F914323A8F65900A22C91 /* Cook.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Cook.storyboard; sourceTree = "<group>"; };
 		218F914623A8F6A100A22C91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = kitchenMaster/Storyboard/kitchenMaster/Base.lproj/User.storyboard; sourceTree = "<group>"; };
+		218F914C23AA3B8000A22C91 /* RezeptCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RezeptCell.swift; sourceTree = "<group>"; };
+		218F914E23AA3BCB00A22C91 /* RezeptCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RezeptCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 		218BA41D23911B9900146098 = {
 			isa = PBXGroup;
 			children = (
+				218F914B23AA389200A22C91 /* Cells */,
 				218BA42823911B9900146098 /* kitchenMaster */,
 				218BA42723911B9900146098 /* Products */,
 			);
@@ -171,6 +176,15 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		218F914B23AA389200A22C91 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				218F914C23AA3B8000A22C91 /* RezeptCell.swift */,
+				218F914E23AA3BCB00A22C91 /* RezeptCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -236,6 +250,7 @@
 				218F913723A8F08400A22C91 /* BigPicture.storyboard in Resources */,
 				218F914423A8F65900A22C91 /* Cook.storyboard in Resources */,
 				218BA43323911B9C00146098 /* Assets.xcassets in Resources */,
+				218F914F23AA3BCB00A22C91 /* RezeptCell.xib in Resources */,
 				218F913A23A8F2E000A22C91 /* TabBar.storyboard in Resources */,
 				218BA43123911B9900146098 /* Main.storyboard in Resources */,
 				218F914223A8F61B00A22C91 /* Home.storyboard in Resources */,
@@ -261,6 +276,7 @@
 				2151936823A0D9E100AAEAA9 /* LoginViewController.swift in Sources */,
 				218BA42C23911B9900146098 /* SceneDelegate.swift in Sources */,
 				2151937423A8354B00AAEAA9 /* CookTableViewController.swift in Sources */,
+				218F914D23AA3B8000A22C91 /* RezeptCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

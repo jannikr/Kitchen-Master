@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--User View Controller-->
+        <!--Nutzer-->
         <scene sceneID="dpa-jb-ZpC">
             <objects>
                 <viewController id="3of-qJ-b3U" customClass="UserViewController" customModule="kitchenMaster" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="NAm-ht-ZkI"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dFm-hY-JUz"/>
+                    <navigationItem key="navigationItem" title="Nutzer" id="x4f-Rc-vlq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxK-za-Qks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -32,6 +32,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gQL-fN-ZOk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

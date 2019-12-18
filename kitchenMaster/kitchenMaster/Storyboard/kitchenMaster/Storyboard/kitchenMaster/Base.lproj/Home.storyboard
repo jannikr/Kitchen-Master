@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Cook Table View Controller-->
+        <!--Kitchen Master-->
         <scene sceneID="INd-lM-sw6">
             <objects>
-                <tableViewController id="0RA-4K-UmC" customClass="CookTableViewController" customModule="kitchenMaster" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="0RA-4K-UmC" customClass="HomeTableViewController" customModule="kitchenMaster" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JL6-lZ-2fh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,10 @@
                             <outlet property="delegate" destination="0RA-4K-UmC" id="ICR-OY-zRK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="xZ5-1k-GWO"/>
+                    <navigationItem key="navigationItem" title="Kitchen Master" id="HDX-lj-drp">
+                        <barButtonItem key="leftBarButtonItem" title="Noti" id="zXa-E1-8wb"/>
+                        <barButtonItem key="rightBarButtonItem" title="Sear" id="m0C-1T-t4X"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPO-AJ-whB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,6 +47,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AHB-cj-vbM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

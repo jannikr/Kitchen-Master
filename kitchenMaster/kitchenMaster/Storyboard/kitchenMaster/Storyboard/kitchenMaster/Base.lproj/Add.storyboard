@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home Table View Controller-->
+        <!--Hinzufügen-->
         <scene sceneID="TPC-6X-ejB">
             <objects>
                 <tableViewController id="bew-N5-wMu" customClass="HomeTableViewController" customModule="kitchenMaster" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                             <outlet property="delegate" destination="bew-N5-wMu" id="kat-FB-NMv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="i9N-bI-Ec6"/>
+                    <navigationItem key="navigationItem" title="Hinzufügen" id="wbb-Jc-hCc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TB7-vG-LKc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,6 +44,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gyh-BV-fa8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
