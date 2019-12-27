@@ -10,11 +10,15 @@ import UIKit
 
 class RezeptCell: UITableViewCell {
 
+    @IBOutlet weak var category: UILabel!
+    @IBOutlet weak var name: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         selectionStyle = .none
     }
+
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
