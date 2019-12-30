@@ -30,8 +30,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Kitchen Master" id="HDX-lj-drp">
-                        <barButtonItem key="leftBarButtonItem" title="Noti" id="zXa-E1-8wb"/>
-                        <barButtonItem key="rightBarButtonItem" title="Sear" id="m0C-1T-t4X"/>
+                        <barButtonItem key="leftBarButtonItem" title="Notify" id="zXa-E1-8wb"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="m0C-1T-t4X"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPO-AJ-whB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

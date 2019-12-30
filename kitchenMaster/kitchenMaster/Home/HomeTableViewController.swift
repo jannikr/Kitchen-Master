@@ -55,7 +55,7 @@ class HomeTableViewController: UITableViewController {
             
             //Configure the cell...
             let recipe = recepes[indexPath.row]
-            cell.category.text = recipe.category.uppercased()
+            cell.category.text = recipe.category!.uppercased()
             cell.name.text = recipe.name
             
             return cell
