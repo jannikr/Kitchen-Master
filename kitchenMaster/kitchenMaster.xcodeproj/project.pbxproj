@@ -32,6 +32,7 @@
 		218F914D23AA3B8000A22C91 /* RezeptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218F914C23AA3B8000A22C91 /* RezeptCell.swift */; };
 		218F914F23AA3BCB00A22C91 /* RezeptCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218F914E23AA3BCB00A22C91 /* RezeptCell.xib */; };
 		21CD495E23B5FDBF00D7D62B /* Recepe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CD495D23B5FDBF00D7D62B /* Recepe.swift */; };
+		21CD496423BE882100D7D62B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CD496323BE882100D7D62B /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		218F914C23AA3B8000A22C91 /* RezeptCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RezeptCell.swift; sourceTree = "<group>"; };
 		218F914E23AA3BCB00A22C91 /* RezeptCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RezeptCell.xib; sourceTree = "<group>"; };
 		21CD495D23B5FDBF00D7D62B /* Recepe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recepe.swift; sourceTree = "<group>"; };
+		21CD496323BE882100D7D62B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				218F913F23A8F4E600A22C91 /* Home */,
 				218F914923A8F72000A22C91 /* Cook */,
 				218F914823A8F71A00A22C91 /* Add */,
+				21CD496523BE883300D7D62B /* Detail */,
 				218F914A23A8F72600A22C91 /* User */,
 				218BA42923911B9900146098 /* AppDelegate.swift */,
 				218BA42B23911B9900146098 /* SceneDelegate.swift */,
@@ -186,6 +189,14 @@
 				218F914E23AA3BCB00A22C91 /* RezeptCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		21CD496523BE883300D7D62B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				21CD496323BE882100D7D62B /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +290,7 @@
 				2151936823A0D9E100AAEAA9 /* LoginViewController.swift in Sources */,
 				218BA42C23911B9900146098 /* SceneDelegate.swift in Sources */,
 				2151937423A8354B00AAEAA9 /* CookTableViewController.swift in Sources */,
+				21CD496423BE882100D7D62B /* DetailViewController.swift in Sources */,
 				218F914D23AA3B8000A22C91 /* RezeptCell.swift in Sources */,
 				21CD495E23B5FDBF00D7D62B /* Recepe.swift in Sources */,
 			);
