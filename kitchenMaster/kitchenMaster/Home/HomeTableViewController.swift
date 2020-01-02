@@ -11,24 +11,42 @@ import UIKit
 class HomeTableViewController: UITableViewController {
     
     var recepes: [Recepe] = []
-
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            
-            let CeasersSalad = Recepe(name: "Ceasers Salad", category: "Salat", person: 2, cookingTime: 20)
-            recepes.append(CeasersSalad)
-            
-            let SpaghettiNapoli = Recepe(name: "Spaghetti Napoli", category: "Hauptspeise", person: 3, cookingTime: 30)
-            recepes.append(SpaghettiNapoli)
-            
-            let PilzSuppe = Recepe(name: "Pilzsuppe", category: "Suppe", person: 2, cookingTime: 25)
-            recepes.append(PilzSuppe)
-            
-            
-            let rezeptCell = UINib.init(nibName: "RezeptCell", bundle: nil)
-            self.tableView.register(rezeptCell, forCellReuseIdentifier: "RezeptCell")
-            self.tableView.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)  
+    
+    let searchBar = UISearchBar()
+        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        recepes.removeAll()
+        configureSearchBar()
+        
+        //Beispiel Rezept schon in der App
+        let CeasersSalad = Recepe(name: "Ceasers Salad", category: "Salat", person: 2, cookingTime: 20)
+        recepes.append(CeasersSalad)
+        
+        let rezeptCell = UINib.init(nibName: "RezeptCell", bundle: nil)
+        self.tableView.register(rezeptCell, forCellReuseIdentifier: "RezeptCell")
+        self.tableView.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
+        
+        do {
+            if let url = Recepe.recepesURL(){
+                let data = try Data(contentsOf: url)
+                let plist = try PropertyListSerialization.propertyList(from: data, options: [], format: nil)
+                if let array = plist as? [[String:Any]] {
+                    for dictionary in array {
+                        let recepe = Recepe(dictionary: dictionary)
+                        recepes.append(recepe)
+                    }
+                    tableView.reloadData()
+                }
+            } else {
+                print(":-) Fehler im Dateisystem.")
+            }
+        } catch {
+            print(":-) error: \(error)")
         }
+    }
+    
 
         // MARK: - Table view data source
 
@@ -60,4 +78,58 @@ class HomeTableViewController: UITableViewController {
             
             return cell
         }
+    
+    
+    //animation for search bar
+    func configureSearchBar() {
+        
+        searchBar.delegate = self
+        searchBar.sizeToFit()
+        showSearchButtons(shouldShow: true)
+        
+        
     }
+
+    func showSearchButtons(shouldShow: Bool) {
+        if shouldShow {
+                    
+            navigationItem.rightBarButtonItem = UIBarButtonItem(
+                    barButtonSystemItem: .search,
+                    target: self,
+                    action: #selector(HomeTableViewController.searchBar(_:)))
+        }else{
+            navigationItem.rightBarButtonItem = nil
+            navigationItem.leftBarButtonItem = nil
+        }
+    }
+    
+    func search(shouldShow: Bool){
+        showSearchButtons(shouldShow: !shouldShow)
+        searchBar.showsCancelButton = shouldShow
+        navigationItem.titleView = shouldShow ? searchBar : nil
+    }
+    
+    //action on search icon
+    @IBAction func searchBar(_ sender: Any) {
+        search(shouldShow: true)
+        searchBar.becomeFirstResponder()
+    }
+    
+    
+    
+}
+
+extension HomeTableViewController: UISearchBarDelegate {
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        search(shouldShow: false)
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        print("End Editing")
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("Current text: \(searchText)")
+    }
+}

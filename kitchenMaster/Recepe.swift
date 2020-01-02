@@ -81,4 +81,18 @@ init(name: String,
         return theDictionary
     }
     
+    //ermittelt den Dateipfad für die Plist-Datei
+    static func recepesURL() -> URL? {
+        let fileURLs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        
+        if let documentURL = fileURLs.first {
+            return documentURL.appendingPathComponent("recepes.plist")
+        }
+        return nil
+    }
+    
+    static func WhiteSpaceSplitter(indgridiantsString: String) -> Array<String> {
+        return indgridiantsString.components(separatedBy: " ")
+    }
+    
 }

@@ -31,7 +31,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Kitchen Master" id="HDX-lj-drp">
                         <barButtonItem key="leftBarButtonItem" title="Notify" id="zXa-E1-8wb"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="m0C-1T-t4X"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="m0C-1T-t4X">
+                            <connections>
+                                <action selector="searchBar:" destination="0RA-4K-UmC" id="Xok-gS-Ufz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPO-AJ-whB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

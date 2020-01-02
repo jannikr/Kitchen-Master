@@ -14,6 +14,8 @@ class AddTableViewController: UITableViewController {
     @IBOutlet weak var categoryTextfield: UITextField!
     @IBOutlet weak var numberTextfield: UITextField!
     @IBOutlet weak var cookingtimeTextfield: UITextField!
+    @IBOutlet weak var ingridiants: UITextField!
+    @IBOutlet weak var instructions: UITextField!
     
     
     override func viewDidLoad() {
@@ -26,7 +28,7 @@ class AddTableViewController: UITableViewController {
         if let name = nameTextfield.text {
             let person = Int(numberTextfield.text!)
             let cookingTime = Int(cookingtimeTextfield.text!)
-            let recepe = Recepe(name: name, category: categoryTextfield.text!, person: person, cookingTime: cookingTime)
+            let recepe = Recepe(name: name, category: categoryTextfield.text!, person: person, cookingTime: cookingTime, instruction: instructions.text!, ingridiants: Recepe.WhiteSpaceSplitter(indgridiantsString: ingridiants.text!))
             print(":-) Rezept: \(recepe)")
             let plistDictionary = recepe.plistDictionary()
             print(":-) plistDicionary: \(plistDictionary)")
@@ -36,49 +38,39 @@ class AddTableViewController: UITableViewController {
              Code-Quelle: Apps programmieren mit Swift von Rheinwerk Computing
             */
             
-            let plistArray = [plistDictionary]
-            do {
-                let data = try PropertyListSerialization.data(fromPropertyList: plistDictionary, format: .xml, options: 0)
+            //let plistArray = [plistDictionary]
+            
+            if let url = Recepe.recepesURL() {
+                let plist: Any?
+                if let inData = try? Data(contentsOf: url){
+                    plist = try? PropertyListSerialization.propertyList(from: inData, options: [], format: nil)
+                } else {
+                    plist = nil
+                }
                 
-                let fileURLs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-                
-                if let documentURL = fileURLs.first {
-                    let url = documentURL.appendingPathComponent("recepes.plist")
+                do {
+                    var plistArray: [[String:Any]] = []
+                    if let theArray = plist as? [[String:Any]] {
+                        plistArray = theArray
+                    }
+                    
+                    plistArray.append(plistDictionary)
+                    
+                    let data = try PropertyListSerialization.data(fromPropertyList: plistArray, format: .xml, options: 0)
+                    
                     try data.write(to: url, options: .atomic)
                     
                     dismiss(animated: true, completion: nil)
-                } else {
-                    print(":-) Fehler im Dateisystem.")
-                }
-            } catch {
+                    
+                } catch {
                     print(":-) error: \(error)")
                 }
+            } else{
+                print(":-) Fehler im Dateisystem")
             }
         }
+    }
         
-    }
-    
-
-    // MARK: - Table view data source
-// Only for dynamic cell structure
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-//
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 0
-//    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
+}
 
 

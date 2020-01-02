@@ -101,6 +101,48 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dzn-j5-2f2">
+                                        <rect key="frame" x="0.0" y="202.66667175292969" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dzn-j5-2f2" id="r7Q-2S-1nw">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zutaten" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3bJ-Tz-hhq">
+                                                    <rect key="frame" x="8" y="5" width="398" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="3bJ-Tz-hhq" secondAttribute="trailing" constant="8" id="612-ih-jWz"/>
+                                                <constraint firstItem="3bJ-Tz-hhq" firstAttribute="leading" secondItem="r7Q-2S-1nw" secondAttribute="leading" constant="8" id="6zf-Yq-Uie"/>
+                                                <constraint firstAttribute="bottom" secondItem="3bJ-Tz-hhq" secondAttribute="bottom" constant="5" id="M4M-9L-nDi"/>
+                                                <constraint firstItem="3bJ-Tz-hhq" firstAttribute="top" secondItem="r7Q-2S-1nw" secondAttribute="top" constant="5" id="vaD-BC-pNJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ULF-7e-Vai">
+                                        <rect key="frame" x="0.0" y="246.33333969116211" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ULF-7e-Vai" id="eFU-T4-oeM">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Anleitung" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uzO-7m-ddi">
+                                                    <rect key="frame" x="8" y="5" width="398" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="uzO-7m-ddi" firstAttribute="top" secondItem="eFU-T4-oeM" secondAttribute="top" constant="5" id="5iS-97-AFO"/>
+                                                <constraint firstAttribute="trailing" secondItem="uzO-7m-ddi" secondAttribute="trailing" constant="8" id="PWT-mi-zhi"/>
+                                                <constraint firstItem="uzO-7m-ddi" firstAttribute="leading" secondItem="eFU-T4-oeM" secondAttribute="leading" constant="8" id="Uso-Pe-EPM"/>
+                                                <constraint firstAttribute="bottom" secondItem="uzO-7m-ddi" secondAttribute="bottom" constant="5" id="fH1-Ci-mDr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -119,6 +161,8 @@
                     <connections>
                         <outlet property="categoryTextfield" destination="EVp-DU-vcs" id="BCP-D6-l9u"/>
                         <outlet property="cookingtimeTextfield" destination="i9f-K0-CUd" id="0jY-Qk-oBc"/>
+                        <outlet property="ingridiants" destination="3bJ-Tz-hhq" id="KF7-lP-O4X"/>
+                        <outlet property="instructions" destination="uzO-7m-ddi" id="Xen-wt-NfY"/>
                         <outlet property="nameTextfield" destination="Wuf-JL-juo" id="37O-v7-TuB"/>
                         <outlet property="numberTextfield" destination="ltd-XR-OAl" id="f7Y-zN-4Os"/>
                     </connections>
