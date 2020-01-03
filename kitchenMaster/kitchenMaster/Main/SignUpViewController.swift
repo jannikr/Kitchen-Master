@@ -9,7 +9,12 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
+    
+    @IBOutlet weak var registerName: CustomTextField!
+    @IBOutlet weak var registerEmail: CustomTextField!
+    @IBOutlet weak var registerPassword: CustomTextField!
+    @IBOutlet weak var errorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
             setupProperties()
@@ -24,5 +29,9 @@ class SignUpViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
-
+     
+    @IBAction func signUpTaped(_ sender: Any) {
+        
+    }
+    
 }

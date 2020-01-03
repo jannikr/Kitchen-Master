@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     //UI View Properties
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
     
     //First load funtion
     override func viewDidLoad() {
@@ -29,5 +30,9 @@ class LoginViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
-
+    
+    @IBAction func loginTapped(_ sender: Any) {
+        
+    }
+    
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ofw-5c-czN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ofw-5c-czN">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -118,6 +118,7 @@ die du zuhause hast.</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="loginTapped:" destination="YU2-fj-tVJ" eventType="touchUpInside" id="TmN-5V-Iio"/>
                                     <segue destination="d3A-Au-8kA" kind="modal" id="Zlk-pc-egm"/>
                                 </connections>
                             </button>
@@ -128,6 +129,13 @@ die du zuhause hast.</string>
                                 <color key="textColor" red="0.96610456710000003" green="0.59953778980000005" blue="0.3411074281" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgW-vz-1R0">
+                                <rect key="frame" x="190" y="659" width="34" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="FWC-A3-1Xz"/>
@@ -135,6 +143,7 @@ die du zuhause hast.</string>
                     <navigationItem key="navigationItem" id="vCj-Lt-JMX"/>
                     <connections>
                         <outlet property="emailTextField" destination="XgB-Ay-t9X" id="03w-CV-vQs"/>
+                        <outlet property="errorLabel" destination="KgW-vz-1R0" id="tR6-02-eRh"/>
                         <outlet property="passwordTextField" destination="AlI-Ln-7rm" id="wqM-Tc-Js2"/>
                     </connections>
                 </viewController>
@@ -177,6 +186,7 @@ die du zuhause hast.</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="signUpTaped:" destination="BOw-ZU-pVi" eventType="touchUpInside" id="fDx-EH-U7G"/>
                                     <segue destination="d3A-Au-8kA" kind="modal" id="MqB-Rr-t3b"/>
                                 </connections>
                             </button>
@@ -186,11 +196,24 @@ die du zuhause hast.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHz-nr-Rpv">
+                                <rect key="frame" x="186" y="657" width="38" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="0Mt-56-LaJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="nPZ-qP-nr4"/>
+                    <connections>
+                        <outlet property="errorLabel" destination="hHz-nr-Rpv" id="cDr-2L-tm6"/>
+                        <outlet property="registerEmail" destination="m8w-3t-4PG" id="b0w-Wg-Zpu"/>
+                        <outlet property="registerName" destination="kdS-ca-JRZ" id="ueP-Qc-lHk"/>
+                        <outlet property="registerPassword" destination="B8o-YV-RfV" id="61M-fC-ODb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sdx-ZR-0ie" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

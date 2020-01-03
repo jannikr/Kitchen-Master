@@ -16,7 +16,7 @@ class HomeTableViewController: UITableViewController {
     var searching = false
     
     let searchBar = UISearchBar()
-        
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -55,65 +55,78 @@ class HomeTableViewController: UITableViewController {
         }
     }
     
-
-        // MARK: - Table view data source
-
-        override func numberOfSections(in tableView: UITableView) -> Int {
-            return 1
-        }
-
-        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            if (searching) {
-                return searchedRecepes.count
-            } else {
-                return recepes.count
-            }
-        }
     
-        //table-view-controller background
-        override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-            cell.backgroundColor = UIColor.clear
-        }
-        
-        //cell-size
-        override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 260
-        }
+    // MARK: - Table view data source
     
-        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            if (searching){
-                let recipe = searchedRecepes[indexPath.row]
-                let recipeDVC = DetailViewController()
-                recipeDVC.modalPresentationStyle = .fullScreen
-                recipeDVC.recepe = recipe
-                self.present(recipeDVC, animated: true)
-                
-            }else{
-                let recipe = recepes[indexPath.row]
-                let recipeDVC = DetailViewController()
-                recipeDVC.modalPresentationStyle = .fullScreen
-                recipeDVC.recepe = recipe
-                self.present(recipeDVC, animated: true)
-            }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (searching) {
+            return searchedRecepes.count
+        } else {
+            return recepes.count
         }
+    }
+    
+    //table-view-controller background
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
+    }
+    
+    //cell-size
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 260
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (searching){
+            performSegue(withIdentifier: "showdetail", sender: self)
+            
+        }else{
+            
+            performSegue(withIdentifier: "showdetail", sender: self)
+            
+            
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showdetail" {
+            guard let destinationViewController =
+                segue.destination as? DetailViewController else {
+                    print("Der Controller hat nicht den erwarteten Typ")
+                    return
+            }
+            guard let selectedIndexPath =
+                tableView.indexPathForSelectedRow else {
+                    print("Es ist keine Zelle ausgewählt")
+                    return
+            }
+            destinationViewController.recepe = recepes[selectedIndexPath.row]
+        }
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RezeptCell", for: indexPath) as! RezeptCell
         
-        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "RezeptCell", for: indexPath) as! RezeptCell
+        //Configure the cell...
+        
+        if (searching){
+            let recipe = searchedRecepes[indexPath.row]
+            cell.category.text = recipe.category!.uppercased()
+            cell.name.text = recipe.name
+        } else {
+            let recipe = recepes[indexPath.row]
+            cell.category.text = recipe.category!.uppercased()
+            cell.name.text = recipe.name
             
-            //Configure the cell...
-            
-            if (searching){
-                let recipe = searchedRecepes[indexPath.row]
-                cell.category.text = recipe.category!.uppercased()
-                cell.name.text = recipe.name
-            } else {
-                let recipe = recepes[indexPath.row]
-                cell.category.text = recipe.category!.uppercased()
-                cell.name.text = recipe.name
-                
-            }
-            return cell
         }
+        return cell
+    }
     
     
     //configs for search bar
@@ -131,14 +144,14 @@ class HomeTableViewController: UITableViewController {
         
         
     }
-
+    
     func showSearchButtons(shouldShow: Bool) {
         if shouldShow {
-                    
+            
             navigationItem.rightBarButtonItem = UIBarButtonItem(
-                    barButtonSystemItem: .search,
-                    target: self,
-                    action: #selector(HomeTableViewController.searchBar(_:)))
+                barButtonSystemItem: .search,
+                target: self,
+                action: #selector(HomeTableViewController.searchBar(_:)))
         }else{
             navigationItem.rightBarButtonItem = nil
             navigationItem.leftBarButtonItem = nil

@@ -10,23 +10,38 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    var recepe: Recepe?
+    @IBOutlet weak var rezeptName: UILabel!
+    @IBOutlet weak var rezeptKategorie: UILabel!
+    @IBOutlet weak var rezeptZutaten: UILabel!
+    @IBOutlet weak var rezeptAnleitung: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    var recepe: Recepe? = nil
 
+    //Insert Data
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .green
+        rezeptName.text = recepe?.name
+        rezeptKategorie.text = recepe?.category?.uppercased()
+        rezeptZutaten.text = (recepe?.ingridiants)?.joined(separator: "-")
+        //funktionier noch nicht
+        rezeptAnleitung.text = recepe?.instruction
     }
+    //Share Button
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func share(_ sender: Any) {
+        
+        guard let theRecipe = recepe else { return }
+        
+        var items: [Any] = ["Dieses Rezept kann ich dir empfehlen: \(theRecipe.name). Installiere jetzt Kitchen Master!"]
+        
+        if let image = imageView.image {
+            items.append(image)
+        }
+        
+        let activityViewController = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        
+        present(activityViewController, animated: true, completion: nil)
+        
     }
-    */
-
 }

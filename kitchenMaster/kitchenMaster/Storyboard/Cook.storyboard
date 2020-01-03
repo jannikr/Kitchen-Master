@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JTH-sE-TDE">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JTH-sE-TDE" customClass="RezeptCell" customModule="kitchenMaster" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JTH-sE-TDE" id="9CN-gi-Y1u">
@@ -41,7 +41,9 @@
         <scene sceneID="hnY-XE-JSV">
             <objects>
                 <navigationController storyboardIdentifier="Cook" automaticallyAdjustsScrollViewInsets="NO" id="tWC-Cr-tGE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="cook_ai" selectedImage="cook_orange_ai" id="ttg-Yx-y0w"/>
+                    <tabBarItem key="tabBarItem" title="" image="cook_ai" selectedImage="cook_orange_ai.png" id="ttg-Yx-y0w">
+                        <color key="badgeColor" red="0.96610456710000003" green="0.59953778980000005" blue="0.3411074281" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UDI-Pk-eDS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -60,6 +62,6 @@
     </scenes>
     <resources>
         <image name="cook_ai" width="32" height="24"/>
-        <image name="cook_orange_ai" width="32" height="24"/>
+        <image name="cook_orange_ai.png" width="32" height="24"/>
     </resources>
 </document>
