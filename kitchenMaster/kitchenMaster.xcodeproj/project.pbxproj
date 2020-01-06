@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		211D6653239D22EA00AC685F /* LoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211D6652239D22EA00AC685F /* LoginSignUpViewController.swift */; };
 		211D665A239FE25700AC685F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211D6659239FE25700AC685F /* CustomButton.swift */; };
+		213345C423C395F500624484 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 213345C323C395F500624484 /* GoogleService-Info.plist */; };
 		2151936823A0D9E100AAEAA9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151936723A0D9E100AAEAA9 /* LoginViewController.swift */; };
 		2151936A23A0E47200AAEAA9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151936923A0E47200AAEAA9 /* CustomTextField.swift */; };
 		2151936C23A0E65600AAEAA9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151936B23A0E65600AAEAA9 /* SignUpViewController.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		211D6652239D22EA00AC685F /* LoginSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpViewController.swift; sourceTree = "<group>"; };
 		211D6659239FE25700AC685F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		213345C323C395F500624484 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2151936723A0D9E100AAEAA9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2151936923A0E47200AAEAA9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		2151936B23A0E65600AAEAA9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				2151936F23A831E200AAEAA9 /* icons */,
 				218BA43223911B9C00146098 /* Assets.xcassets */,
 				218BA43423911B9C00146098 /* LaunchScreen.storyboard */,
+				213345C323C395F500624484 /* GoogleService-Info.plist */,
 				218BA43723911B9C00146098 /* Info.plist */,
 			);
 			path = kitchenMaster;
@@ -262,6 +265,7 @@
 				218BA43623911B9C00146098 /* LaunchScreen.storyboard in Resources */,
 				2151937023A831E200AAEAA9 /* icons in Resources */,
 				218F913723A8F08400A22C91 /* BigPicture.storyboard in Resources */,
+				213345C423C395F500624484 /* GoogleService-Info.plist in Resources */,
 				218F914423A8F65900A22C91 /* Cook.storyboard in Resources */,
 				218BA43323911B9C00146098 /* Assets.xcassets in Resources */,
 				218F914F23AA3BCB00A22C91 /* RezeptCell.xib in Resources */,
