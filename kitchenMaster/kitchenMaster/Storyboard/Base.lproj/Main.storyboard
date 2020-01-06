@@ -119,7 +119,6 @@ die du zuhause hast.</string>
                                 </state>
                                 <connections>
                                     <action selector="loginTapped:" destination="YU2-fj-tVJ" eventType="touchUpInside" id="TmN-5V-Iio"/>
-                                    <segue destination="d3A-Au-8kA" kind="modal" id="Zlk-pc-egm"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Passwort vergessen?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dc2-4k-Gcj">
@@ -130,7 +129,7 @@ die du zuhause hast.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgW-vz-1R0">
-                                <rect key="frame" x="190" y="659" width="34" height="18"/>
+                                <rect key="frame" x="20" y="659" width="374" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -149,7 +148,7 @@ die du zuhause hast.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgO-Qf-KQd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1657" y="-364"/>
+            <point key="canvasLocation" x="1656.521739130435" y="-364.4021739130435"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="CI8-zW-uFJ">
@@ -187,7 +186,6 @@ die du zuhause hast.</string>
                                 </state>
                                 <connections>
                                     <action selector="signUpTaped:" destination="BOw-ZU-pVi" eventType="touchUpInside" id="fDx-EH-U7G"/>
-                                    <segue destination="d3A-Au-8kA" kind="modal" id="MqB-Rr-t3b"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Dein Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kdS-ca-JRZ" customClass="CustomTextField" customModule="kitchenMaster" customModuleProvider="target">
@@ -196,8 +194,8 @@ die du zuhause hast.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHz-nr-Rpv">
-                                <rect key="frame" x="186" y="657" width="38" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHz-nr-Rpv">
+                                <rect key="frame" x="20" y="657" width="374" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -217,7 +215,7 @@ die du zuhause hast.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sdx-ZR-0ie" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1657" y="471"/>
+            <point key="canvasLocation" x="1656.521739130435" y="470.38043478260875"/>
         </scene>
         <!--Custom Navigation Controller-->
         <scene sceneID="WtC-LS-vJg">
@@ -249,7 +247,4 @@ die du zuhause hast.</string>
     <resources>
         <image name="cook" width="634" height="608"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="MqB-Rr-t3b"/>
-    </inferredMetricsTieBreakers>
 </document>

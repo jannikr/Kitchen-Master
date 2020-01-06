@@ -1,0 +1,6 @@
+framework module Pods_kitchenMaster {
+  umbrella header "Pods-kitchenMaster-umbrella.h"
+
+  export *
+  module * { export * }
+}

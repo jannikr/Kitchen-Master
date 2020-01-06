@@ -34,6 +34,7 @@
 		218F914F23AA3BCB00A22C91 /* RezeptCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218F914E23AA3BCB00A22C91 /* RezeptCell.xib */; };
 		21CD495E23B5FDBF00D7D62B /* Recepe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CD495D23B5FDBF00D7D62B /* Recepe.swift */; };
 		21CD496423BE882100D7D62B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CD496323BE882100D7D62B /* DetailViewController.swift */; };
+		ED02B2E4E214E036BFF77BBF /* Pods_kitchenMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A654F60FD798FF08B0797B48 /* Pods_kitchenMaster.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,9 @@
 		218F914E23AA3BCB00A22C91 /* RezeptCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RezeptCell.xib; sourceTree = "<group>"; };
 		21CD495D23B5FDBF00D7D62B /* Recepe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recepe.swift; sourceTree = "<group>"; };
 		21CD496323BE882100D7D62B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		47DB808506E857A42687CAF8 /* Pods-kitchenMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kitchenMaster.debug.xcconfig"; path = "Target Support Files/Pods-kitchenMaster/Pods-kitchenMaster.debug.xcconfig"; sourceTree = "<group>"; };
+		7BD6E84A94A76D91E545E24C /* Pods-kitchenMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kitchenMaster.release.xcconfig"; path = "Target Support Files/Pods-kitchenMaster/Pods-kitchenMaster.release.xcconfig"; sourceTree = "<group>"; };
+		A654F60FD798FF08B0797B48 /* Pods_kitchenMaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kitchenMaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,12 +77,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED02B2E4E214E036BFF77BBF /* Pods_kitchenMaster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EA01FCEC3D75BA7D00299A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47DB808506E857A42687CAF8 /* Pods-kitchenMaster.debug.xcconfig */,
+				7BD6E84A94A76D91E545E24C /* Pods-kitchenMaster.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		211D6651239D22AB00AC685F /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +121,8 @@
 				218F914B23AA389200A22C91 /* Cells */,
 				218BA42823911B9900146098 /* kitchenMaster */,
 				218BA42723911B9900146098 /* Products */,
+				0EA01FCEC3D75BA7D00299A1 /* Pods */,
+				DC052757725F806B931FE997 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,6 +219,14 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		DC052757725F806B931FE997 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A654F60FD798FF08B0797B48 /* Pods_kitchenMaster.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,9 +234,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 218BA43A23911B9C00146098 /* Build configuration list for PBXNativeTarget "kitchenMaster" */;
 			buildPhases = (
+				C0D730481DABE85E709DEA53 /* [CP] Check Pods Manifest.lock */,
 				218BA42223911B9900146098 /* Sources */,
 				218BA42323911B9900146098 /* Frameworks */,
 				218BA42423911B9900146098 /* Resources */,
+				CC0713813C48CF85EDF7EC86 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -276,6 +303,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C0D730481DABE85E709DEA53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kitchenMaster-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC0713813C48CF85EDF7EC86 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kitchenMaster/Pods-kitchenMaster-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kitchenMaster/Pods-kitchenMaster-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kitchenMaster/Pods-kitchenMaster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		218BA42223911B9900146098 /* Sources */ = {
@@ -470,6 +539,7 @@
 		};
 		218BA43B23911B9C00146098 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47DB808506E857A42687CAF8 /* Pods-kitchenMaster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -488,6 +558,7 @@
 		};
 		218BA43C23911B9C00146098 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BD6E84A94A76D91E545E24C /* Pods-kitchenMaster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
