@@ -25,6 +25,20 @@ class LoginViewController: UIViewController {
     //Setups UI Elements
     func setupProperties(){
         
+        //Make error label invisible
+        errorLabel.alpha = 0
+        
+        //more lines for error
+        errorLabel.lineBreakMode = .byWordWrapping
+        errorLabel.numberOfLines = 0;
+        
+        //Style input-textfield
+        CustomInputField.styleInputField(passwordTextField)
+        CustomInputField.styleInputField(emailTextField)
+        
+        //do not show charakters
+        passwordTextField.isSecureTextEntry = true
+        
     }
     
     //Hide status-bar

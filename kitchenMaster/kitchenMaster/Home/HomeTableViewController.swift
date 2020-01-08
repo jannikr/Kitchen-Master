@@ -24,7 +24,7 @@ class HomeTableViewController: UITableViewController {
         configureSearchBar()
         
         //Beispiel Rezept schon in der App
-        let CeasersSalad = Recepe(name: "Ceasers Salad", category: "Salat", person: 2, cookingTime: 20)
+        let CeasersSalad = Recepe(name: "Ceasers Salad", category: "Salat", person: 2, cookingTime: 20, ingridiants: ["Kopfsalat", "Tomate", "Käse"])
         recepes.append(CeasersSalad)
         
         //Celll Style
@@ -170,6 +170,51 @@ class HomeTableViewController: UITableViewController {
         searchBar.becomeFirstResponder()
     }
     
+    func returnRecepeIngridiants(recepes : [Recepe]) -> [[String]] {
+        var ingridiants: [[String]] = []
+        for i in recepes {
+            //testing: are the ingridiants saved?
+            if i.ingridiants != nil{
+                //save them in an array
+                ingridiants.append(i.ingridiants!)
+            } else {
+                ingridiants.append([])
+            }
+        }
+        return ingridiants
+    }
+    
+    func getMatches(availableIngridiants : [[String]], searchedIngridiants : [String]) -> [Int] {
+        
+        
+        var returnNumber: [Int] = []
+        //let newArray = availableIngridiants[0]
+        var helper = 0
+        for i in availableIngridiants{
+            if Set(i) == Set(searchedIngridiants) {
+                returnNumber.append(helper)
+            }
+            helper += 1
+        }
+        
+        return returnNumber
+    }
+    
+    func keepMatches(recepes: [Recepe], matchesArray: [Int]) -> [Recepe] {
+        
+        var searchedRecepes: [Recepe] = []
+        var helper = 0
+        
+        for i in recepes {
+            if matchesArray.contains(helper){
+                searchedRecepes.append(i)
+            }
+            helper += 1
+        }
+        
+        return searchedRecepes
+    }
+    
     
     
 }
@@ -187,13 +232,40 @@ extension HomeTableViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         switch searchBar.selectedScopeButtonIndex {
         case 0:
-            searchedRecepes = recepes.filter({$0.name.prefix(searchText.count) == searchText})
+            //search by name
+            
+            //Check if user visited "search by ingridiants" in order to prevent an empty searchedRecepes-Array
+            if searchedRecepes.isEmpty{
+                searchedRecepes = recepes
+            } else{
+                searchedRecepes = recepes.filter({$0.name.prefix(searchText.count) == searchText})
+            }
         case 1:
-            //Hier müssen Ingridiants stehen
-            searchedRecepes = recepes.filter({$0.name.prefix(searchText.count) == searchText})
+            //search by ingridiants
+            
+            //Gib für jedes Rezept ein Array mit den Zutaten zurück. Speichert die Arrays in einem Array
+            let availableIngridiants = returnRecepeIngridiants(recepes: recepes)
+            
+            //Gibt die Zutaten aus der Suchleiste als Array
+            let searchedTextToArray = searchText.components(separatedBy: ", ")
+
+            
+            //Vergleiche die Rezepte miteinander und Gebe die Array-Positionen zurück, die matchen
+            let matchesArray = getMatches(availableIngridiants: availableIngridiants, searchedIngridiants: searchedTextToArray)
+            
+            //Speichert die Matches in einem neuen Array
+            searchedRecepes = keepMatches(recepes: recepes, matchesArray: matchesArray)
+
         default:
             //achtung! hier kann fehler kommen, wenn optional Category nicht gesetzt ist.
-            searchedRecepes = recepes.filter({$0.category!.prefix(searchText.count) == searchText})
+            //search by category
+            
+            //Check if user visited "search by ingridiants" in order to prevent an empty searchedRecepes-Array
+            if searchedRecepes.isEmpty{
+                searchedRecepes = recepes
+            } else{
+                searchedRecepes = recepes.filter({$0.category!.prefix(searchText.count) == searchText})
+            }
         }
         searching = true
         tableView.reloadData()

@@ -25,6 +25,17 @@ class SignUpViewController: UIViewController {
         //Setups UI Elements
         func setupProperties(){
             
+            //Make error label invisible
+            errorLabel.alpha = 0;
+            
+            //Look input-textfield
+            CustomInputField.styleInputField(registerName)
+            CustomInputField.styleInputField(registerEmail)
+            CustomInputField.styleInputField(registerPassword)
+            
+            //do not show charakters
+            registerPassword.isSecureTextEntry = true
+            
         }
     
     //Hide status-bar
