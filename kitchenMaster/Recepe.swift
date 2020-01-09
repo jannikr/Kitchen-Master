@@ -10,6 +10,7 @@ import Foundation
 
 struct Recepe {
     let name: String
+    let imageName: String?
     let category: String?
     let person: Int?
     let cookingTime: Int?
@@ -20,6 +21,7 @@ struct Recepe {
     
 //init-Methode mit Standardwerten
 init(name: String,
+     imageName: String? = nil,
      category: String? = nil,
      person: Int? = nil,
      cookingTime: Int? = nil,
@@ -28,6 +30,7 @@ init(name: String,
      timestamp: Double? = nil){
     
         self.name = name
+        self.imageName = imageName
         self.category = category
         self.person = person
         self.cookingTime = cookingTime
@@ -44,6 +47,7 @@ init(name: String,
 //init-Methode um aus einem Dictionary ein Rezept-Objekt zu erstellen
     init(dictionary: [String:Any]) {
         name = dictionary["name"] as! String
+        imageName = dictionary["imageName"] as? String
         category = dictionary["category"] as? String
         person = dictionary["person"] as? Int
         cookingTime = dictionary["time"] as? Int
@@ -60,6 +64,10 @@ init(name: String,
         
         if let theCategory = category {
             theDictionary["category"] = theCategory
+        }
+        
+        if let theImageName = imageName {
+            theDictionary["imageName"] = theImageName
         }
         
         if let thePerson = person {

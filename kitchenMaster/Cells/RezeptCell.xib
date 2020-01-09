@@ -58,6 +58,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="category" destination="adY-ag-Avv" id="3e2-RM-fxQ"/>
+                <outlet property="img" destination="1Oo-Hk-9gg" id="Fm1-a3-Pzc"/>
                 <outlet property="name" destination="W2K-Yb-85t" id="a9k-LS-PmQ"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="-14.673913043478262"/>

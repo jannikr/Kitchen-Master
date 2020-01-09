@@ -12,6 +12,7 @@ class RezeptCell: UITableViewCell {
 
     @IBOutlet weak var category: UILabel!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var img: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -24,8 +24,15 @@ class HomeTableViewController: UITableViewController {
         configureSearchBar()
         
         //Beispiel Rezept schon in der App
-        let CeasersSalad = Recepe(name: "Ceasers Salad", category: "Salat", person: 2, cookingTime: 20, ingridiants: ["Kopfsalat", "Tomate", "Käse"])
+        let CeasersSalad = Recepe(name: "Ceasers Salad", imageName: "salad", category: "Salat", person: 2, cookingTime: 20, ingridiants: ["Kopfsalat", "Tomate", "Käse"])
         recepes.append(CeasersSalad)
+        
+        let PizzaHawaii = Recepe(name: "Pizza Hawaii", imageName: "pizza", category: "Hauptspeise", person: 1, cookingTime: 50,instruction: "Den Pizzateig mit Tomatensoße bestreichen und nach belieben die Zutaten auf die Pizza legen. Anschließend muss die Pizza für 30 Minuten bei 220°C in den Ofen (Ober-/Unterhitze)" , ingridiants: ["Pizzateig", "Tomatensoße", "Käse", "Ananas", "Zwiebel"])
+        recepes.append(PizzaHawaii)
+
+        let CremeBrulee = Recepe(name: "Crème Brûlée", imageName: "cremeBrulee", category: "Nachspeise", person: 2, cookingTime: 20, instruction: "Sahne, Milch, Zucker und Mark und Schote von der Vanillestange aufkochen. Eier in einer Schüssel cremig aufschlagen und das heiße Sahne/Milch-Gemisch langsam unter ständigem Rühren zufügen. In Förmchen füllen und im Wasserbad im Ofen bei 130 - 150 °C ca. 40 Minuten stocken lassen. Anschließend mindestens 4 Stunden im Kühlschrank erkalten lassen. Vor dem Servieren mit Zucker bestreuen und mit dem Bunsenbrenner karamellisieren.", ingridiants: ["Sahne", "Milch", "Zucker", "Vanilleschote", "Ei"])
+        recepes.append(CremeBrulee)
+        
         
         //Celll Style
         let rezeptCell = UINib.init(nibName: "RezeptCell", bundle: nil)
@@ -119,10 +126,21 @@ class HomeTableViewController: UITableViewController {
             let recipe = searchedRecepes[indexPath.row]
             cell.category.text = recipe.category!.uppercased()
             cell.name.text = recipe.name
+            /*
+            if recipe.imageName != nil {
+                cell.img.image = UIImage(named: recipe.imageName!)
+            }
+            */
         } else {
             let recipe = recepes[indexPath.row]
             cell.category.text = recipe.category!.uppercased()
             cell.name.text = recipe.name
+            
+            if recipe.imageName != nil {
+                cell.img.image = UIImage(named: recipe.imageName!)
+            } else {
+                cell.img.image = UIImage(named: "salad")
+            }
             
         }
         return cell
