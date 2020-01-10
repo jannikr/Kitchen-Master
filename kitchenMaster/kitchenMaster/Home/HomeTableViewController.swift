@@ -256,7 +256,7 @@ extension HomeTableViewController: UISearchBarDelegate {
             if searchedRecepes.isEmpty{
                 searchedRecepes = recepes
             } else{
-                searchedRecepes = recepes.filter({$0.name.prefix(searchText.count) == searchText})
+                searchedRecepes = recepes.filter({$0.name.contains(searchText)})
             }
         case 1:
             //search by ingridiants
