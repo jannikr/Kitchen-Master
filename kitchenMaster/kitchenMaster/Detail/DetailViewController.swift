@@ -28,12 +28,14 @@ class DetailViewController: UIViewController {
         
         rezeptZutaten.numberOfLines = 0
         rezeptZutaten.frame = CGRect(x: 20.0, y: 350.0, width: 374.0 , height: 100.0)
-        print(recepe!)
         rezeptName.text = recepe?.name
         rezeptKategorie.text = recepe?.category?.uppercased()
         rezeptZutaten.text = (recepe?.ingridiants)?.joined(separator: "-")
+        
         //funktionier noch nicht
         rezeptAnleitung.text = recepe?.instruction
+        
+        
         if (recepe?.imageName != nil){
             imageView.image = UIImage(named: (recepe?.imageName)!)
         } else {

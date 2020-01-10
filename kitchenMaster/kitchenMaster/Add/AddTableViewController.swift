@@ -29,7 +29,7 @@ class AddTableViewController: UITableViewController {
             let person = Int(numberTextfield.text!)
             let cookingTime = Int(cookingtimeTextfield.text!)
             let recepe = Recepe(name: name, category: categoryTextfield.text!, person: person, cookingTime: cookingTime, instruction: instructions.text!, ingridiants: Recepe.WhiteSpaceSplitter(indgridiantsString: ingridiants.text!))
-            print(":-) Rezept: \(recepe)")
+            print(":-) Rezept Neu: \(recepe)")
             let plistDictionary = recepe.plistDictionary()
             print(":-) plistDicionary: \(plistDictionary)")
             

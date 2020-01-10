@@ -79,7 +79,7 @@ init(name: String,
         }
         
         if let theInstruction = instruction {
-            theDictionary["istruction"] = theInstruction
+            theDictionary["instruction"] = theInstruction
         }
         
         if let theIngridiants = ingridiants {
