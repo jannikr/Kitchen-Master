@@ -175,7 +175,7 @@
         <scene sceneID="kdy-fL-N3S">
             <objects>
                 <navigationController storyboardIdentifier="Add" automaticallyAdjustsScrollViewInsets="NO" id="ejF-gw-6Lo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="add_ai" selectedImage="add_orange_ai" id="kmh-71-9W1"/>
+                    <tabBarItem key="tabBarItem" title="" image="add_ai_test" selectedImage="add_ai_test_orange" id="kmh-71-9W1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gyh-BV-fa8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -193,7 +193,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add_ai" width="28" height="29"/>
-        <image name="add_orange_ai" width="28" height="29"/>
+        <image name="add_ai_test" width="30" height="30"/>
+        <image name="add_ai_test_orange" width="30" height="30"/>
     </resources>
 </document>

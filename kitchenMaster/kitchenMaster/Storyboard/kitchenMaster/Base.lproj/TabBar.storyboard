@@ -38,7 +38,7 @@
         <scene sceneID="VEb-Ib-MRh">
             <objects>
                 <viewControllerPlaceholder storyboardName="Add" referencedIdentifier="Add" id="NVn-Lx-H97" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Sty-B3-Ny4"/>
+                    <tabBarItem key="tabBarItem" id="Sty-B3-Ny4"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwp-o1-IoH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
