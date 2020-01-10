@@ -60,7 +60,9 @@ class AddTableViewController: UITableViewController {
                     
                     try data.write(to: url, options: .atomic)
                     
-                    dismiss(animated: true, completion: nil)
+                    self.transitionToHome()
+                    
+                    //dismiss(animated: true, completion: nil)
                     
                 } catch {
                     print(":-) error: \(error)")
@@ -69,6 +71,15 @@ class AddTableViewController: UITableViewController {
                 print(":-) Fehler im Dateisystem")
             }
         }
+        
+    }
+    
+    func transitionToHome() {
+        
+        let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "TabBar")
+        self.present(controller, animated: true, completion: nil)
+        
     }
         
 }

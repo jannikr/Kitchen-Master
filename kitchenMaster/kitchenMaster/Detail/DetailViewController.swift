@@ -24,11 +24,11 @@ class DetailViewController: UIViewController {
         
         //more lines for instructions
         rezeptAnleitung.numberOfLines = 0
-        rezeptAnleitung.frame = CGRect(x: 20.0, y: 480.0, width: 374.0 , height: 100.0)
+        rezeptAnleitung.frame = CGRect(x: 20.0, y: 500.0, width: 374.0 , height: 100.0)
         
         rezeptZutaten.numberOfLines = 0
         rezeptZutaten.frame = CGRect(x: 20.0, y: 350.0, width: 374.0 , height: 100.0)
-        
+        print(recepe!)
         rezeptName.text = recepe?.name
         rezeptKategorie.text = recepe?.category?.uppercased()
         rezeptZutaten.text = (recepe?.ingridiants)?.joined(separator: "-")

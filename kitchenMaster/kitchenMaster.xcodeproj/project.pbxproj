@@ -99,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				211D6652239D22EA00AC685F /* LoginSignUpViewController.swift */,
+				211D6659239FE25700AC685F /* CustomButton.swift */,
 				2151936723A0D9E100AAEAA9 /* LoginViewController.swift */,
 				2151936B23A0E65600AAEAA9 /* SignUpViewController.swift */,
 			);
@@ -108,7 +109,6 @@
 		211D6658239FE22300AC685F /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				211D6659239FE25700AC685F /* CustomButton.swift */,
 				2151936923A0E47200AAEAA9 /* CustomTextField.swift */,
 				2151936D23A6777700AAEAA9 /* CustomNavigationController.swift */,
 				211B181123C5E13900E41772 /* CustomInputField.swift */,
