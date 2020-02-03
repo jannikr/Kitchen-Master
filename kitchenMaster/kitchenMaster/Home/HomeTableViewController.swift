@@ -126,6 +126,8 @@ class HomeTableViewController: UITableViewController {
             let recipe = searchedRecepes[indexPath.row]
             cell.category.text = recipe.category!.uppercased()
             cell.name.text = recipe.name
+            cell.timeLabel.text = "\(recipe.cookingTime!) Minuten"
+            cell.personLabel.text = "\(recipe.person!) Person(en)"
             /*
             if recipe.imageName != nil {
                 cell.img.image = UIImage(named: recipe.imageName!)
@@ -135,6 +137,8 @@ class HomeTableViewController: UITableViewController {
             let recipe = recepes[indexPath.row]
             cell.category.text = recipe.category!.uppercased()
             cell.name.text = recipe.name
+            cell.timeLabel.text = "\(recipe.cookingTime!) Minuten"
+            cell.personLabel.text = "\(recipe.person!) Person(en)"
             
             if recipe.imageName != nil {
                 cell.img.image = UIImage(named: recipe.imageName!)

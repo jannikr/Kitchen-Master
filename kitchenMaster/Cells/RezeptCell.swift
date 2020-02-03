@@ -12,6 +12,8 @@ class RezeptCell: UITableViewCell {
 
     @IBOutlet weak var category: UILabel!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var personLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var img: UIImageView!
     
     override func awakeFromNib() {
