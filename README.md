@@ -8,7 +8,11 @@ To get a first idea of the application structure you can habe a look at the wire
 kitchenMaster ist completely programmed using Swift. Currently you can save recipes on the local Storage with pList as a Dictionary. There is also a user login and register function that is connected to the Google Data-Base service "Firebase"
 
 ## Images
-
+<div style="float:left;margin:0 10px 0 0">
+  <img src="documentation/Images/LoginScreen.png" width="200">
+  <img src="documentation/Images/HomeScreen.png" width="200">
+  <img src="documentation/Images/SearchScreen.png" width="200">
+</div>
 
 ## Features 1st stage
 * Searching for recipes based on ingrediants
