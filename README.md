@@ -1,7 +1,7 @@
 # kitchenMaster
 This is one of my first iPhone applications. Its idea is to recommend recipes based on the ingredients you have at home.
 
-# Architecture
+## Architecture
 To get a first idea of the application structure you can habe a look at the wireframe. You can find this file in the documentation folder. There are some more informations about the app (only in German).
 
 ## Coding and Data Base
